@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>李文秀 | 個人簡歷</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.25 });
+  
+      document.querySelectorAll("section").forEach(sec => {
+        sec.classList.add("fade-in");
+        observer.observe(sec);
+      });
+    });
+  </script>
+  
+</head>
+<body>
+  <div class="sidebar">
+  <button id="toggle-theme" class="theme-toggle">切換暗黑模式</button>
+    <img src="images/profile.jpg" alt="個人照片" class="profile-pic profile-animate" />
+    <h1 class="name-animate">李文秀</h1>
+    <p class="email-animate">michelle98074@gmail.com</p>
+  </div>
+
+  <div class="main">
+    <section class="about">
+      <h2>關於我</h2>
+      <p>我是熱愛資訊科技的創新實踐者，擁有前後端開發經驗，喜於將技術應用於生活解決方案，並熱衷於學習新知，持續精進自我。</p>
+    </section>
+
+    <section class="experience">
+      <h2>個人經歷與特色</h2>
+      <ul>
+        <li>擁有多項技術與資料庫系統建構。</li>
+        <li>參與實作專案應用，具備實際專案經驗。</li>
+        <li>具備良好邏輯思維與解決問題能力，擅長獨立開發與團隊合作。</li>
+        <li>持續關注前端新技術與框架，熱愛挑戰與創新。</li>
+      </ul>
+    </section>
+
+    <section class="education">
+      <h2>學歷</h2>
+      <ul>
+        <li>國立聯合大學 資訊管理學士學位</li>
+        <li>AI應用規劃師培訓</li>
+      </ul>
+    </section>
+
+    <section class="languages">
+      <h2>語言能力</h2>
+      <ul>
+        <li>中文（母語）</li>
+        <li>英文（多益650分，具聽說讀寫基礎能力）</li>
+      </ul>
+    </section>
+
+    <section class="skills">
+      <h2>技能</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>C#</li>
+        <li>PHP</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+        <li>MySQL</li>
+      </ul>
+    </section>
+
+    <section class="portfolio">
+        <h2>作品集</h2>
+        <div class="project-grid">
+        <div class="project-card">
+    <a href="images/Project1.png" data-lightbox="projects" data-title="帕金森症衛教遊戲">
+      <img src="images/Project1.png" alt="帕金森症衛教遊戲" />
+    </a>
+        <h3>帕金森症衛教遊戲</h3>
+        <p>遊戲化學習系統，使用Unity、C#等技術。</p>
+        <a href="files/project1.pdf" download class="download-link">作品文件檔</a>
+        </div>
+        <div class="project-card">
+    <a href="images/Project2.png" data-lightbox="projects" data-title="財務管理應用專案">
+        <img src="images/Project2.png" alt="財務管理應用專案" />
+    </a>
+        <h3>財務管理應用專案</h3>
+        <p>財務記帳與視覺化分析系統，使用 React.js + Node.js。</p>
+        <a href="files/project2.pdf" download class="download-link">作品文件檔</a>
+        </div>
+        <div class="project-card">
+    <a href="images/Rabbit.JPG" data-lightbox="projects" data-title="更多作品即將上架">
+        <img src="images/Rabbit.JPG" alt="更多作品即將上架" />
+    </a>
+        <h3>更多作品即將上架</h3>
+        <p>敬請期待...</p>
+        </div>
+        </div>
+    </section>
+
+<!-- 響應式版型支援 -->
+<style>
+  @media screen and (max-width: 768px) {
+    body {
+      flex-direction: column;
+    }
+
+    .sidebar {
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .main {
+      padding: 20px;
+    }
+
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<section class="resume">
+        <h2>下載我的履歷</h2>
+        <a href="files/resume.pdf" download class="download-link">點我下載履歷 PDF</a>
+    </section>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <section class="contact">
+        <h2>聯絡我</h2>
+        <form action="https://formspree.io/f/mdkejwnz" method="POST">
+          <label>姓名：</label>
+          <input type="text" name="name" required><br />
+      
+          <label>信箱：</label>
+          <input type="email" name="email" required><br />
+      
+          <label>訊息：</label>
+          <textarea name="message" rows="4" required></textarea><br />
+      
+          <button type="submit">送出</button>
+        </form>
+      </section> 
+      <section class="cat-api">
+      <h2>貓貓圖片展示</h2>
+      <button id="loadCat" class="cat-button">隨機貓貓 🐱</button>
+      <div id="catContainer" style="margin-top: 20px;"></div>
+    </section>     
+  </div>
+<script>
+  // 貓貓圖片 API 載入功能
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('loadCat');
+    const container = document.getElementById('catContainer');
+    if (btn && container) {
+      btn.addEventListener('click', async () => {
+        const res = await fetch('https://api.thecatapi.com/v1/images/search');
+        const data = await res.json();
+        container.innerHTML = `<img src="${data[0].url}" alt="可愛貓咪" style="max-width:100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);" />`;
+      });
+    }
+  });
+</script>
+<script>
+    // 表單即時驗證功能
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contactForm');
+      const emailInput = form.querySelector('input[name="email"]');
+  
+      emailInput.addEventListener('input', () => {
+        if (!emailInput.validity.valid) {
+          emailInput.style.borderColor = 'red';
+          emailInput.title = '請輸入有效的電子郵件地址';
+        } else {
+          emailInput.style.borderColor = '#ccc';
+          emailInput.title = '';
+        }
+      });
+    });
+  </script>
+<script>
+  const toggleBtn = document.getElementById('toggle-theme');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+  });
+</script>
+</body>
+</html>
+
