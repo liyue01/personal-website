@@ -24,6 +24,7 @@
   </script>
   
 </head>
+
 <body>
   <div class="sidebar">
   <button id="toggle-theme" class="theme-toggle">切換暗黑模式</button>
@@ -35,7 +36,7 @@
   <div class="main">
     <section class="about">
       <h2>關於我</h2>
-      <p>我是熱愛資訊科技的創新實踐者，擁有前後端開發經驗，喜於將技術應用於生活解決方案，並熱衷於學習新知，持續精進自我。</p>
+      <p>我是熱愛資訊科技的創新實踐者，擁有前後端、App與遊戲相關的開發經驗，喜於將技術應用於生活解決方案，並熱衷於學習新知，持續精進自我。</p>
     </section>
 
     <section class="experience">
@@ -44,7 +45,7 @@
         <li>擁有多項技術與資料庫系統建構。</li>
         <li>參與實作專案應用，具備實際專案經驗。</li>
         <li>具備良好邏輯思維與解決問題能力，擅長獨立開發與團隊合作。</li>
-        <li>持續關注前端新技術與框架，熱愛挑戰與創新。</li>
+        <li>熱愛挑戰與創新。</li>
       </ul>
     </section>
 
@@ -52,7 +53,7 @@
       <h2>學歷</h2>
       <ul>
         <li>國立聯合大學 資訊管理學士學位</li>
-        <li>AI應用規劃師培訓</li>
+        <li>AI應用規劃師培訓認證</li>
       </ul>
     </section>
 
@@ -94,9 +95,17 @@
         <img src="images/Project2.png" alt="財務管理應用專案" />
     </a>
         <h3>財務管理應用專案</h3>
-        <p>財務記帳與視覺化分析系統，使用 React.js + Node.js。</p>
+        <p>財務記帳與視覺化分析系統，使用 React.js 、 Node.js等技術。</p>
         <a href="files/project2.pdf" download class="download-link">作品文件檔</a>
         </div>
+        <div class="project-card">
+          <a href="images/Project3.png" data-lightbox="projects" data-title="UV紫外線提醒App">
+            <img src="images/Project3.png" alt="UV 紫外線提醒 App" />
+          </a>
+          <h3>UV紫外線提醒App</h3>
+          <p>串接 OpenMeteo API，提供即時的UV顯示。</p>
+          <a href="files/project3.pdf" download class="download-link">作品文件檔</a>
+        </div>        
         <div class="project-card">
     <a href="images/Rabbit.JPG" data-lightbox="projects" data-title="更多作品即將上架">
         <img src="images/Rabbit.JPG" alt="更多作品即將上架" />
@@ -107,7 +116,6 @@
         </div>
     </section>
 
-<!-- 響應式版型支援 -->
 <style>
   @media screen and (max-width: 768px) {
     body {
@@ -135,8 +143,6 @@
         <a href="files/resume.pdf" download class="download-link">點我下載履歷 PDF</a>
     </section>
 
-    
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     <section class="contact">
         <h2>聯絡我</h2>
@@ -160,7 +166,7 @@
     </section>     
   </div>
 <script>
-  // 貓貓圖片 API 載入功能
+
   document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('loadCat');
     const container = document.getElementById('catContainer');
@@ -174,7 +180,7 @@
   });
 </script>
 <script>
-    // 表單即時驗證功能
+
     document.addEventListener('DOMContentLoaded', () => {
       const form = document.getElementById('contactForm');
       const emailInput = form.querySelector('input[name="email"]');
